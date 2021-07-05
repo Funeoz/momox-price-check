@@ -32,7 +32,7 @@ def get_momox_price(ean: str):
             f.write(f"{r['product']['title']}, {r['product']['ean']}, {r['price']}\n")
     elif r["status"] == "unknown":
         with open("unknown.txt", "a+", encoding="utf-8") as f:
-            f.write(ean)
+            f.write(ean + "\n")
 
 def decode(image):
     # decodes all barcodes from an image
